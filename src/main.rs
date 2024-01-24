@@ -181,7 +181,7 @@ mod tests {
             // Attach to the SQLite DB
             conn.execute_batch("
             INSTALL sqlite;
-            ATTACH './db/sqlite_writer_duckdb_reader_no_wal.db' AS sqlite_db (TYPE SQLITE, READONLY TRUE);
+            ATTACH './db/sqlite_writer_duckdb_reader_no_wal.db' AS sqlite_db (TYPE SQLITE, READ_ONLY);
             ").unwrap();
 
             // Count the rows
@@ -239,7 +239,7 @@ mod tests {
             // Attach to the SQLite DB
             conn.execute_batch("
             INSTALL sqlite;
-            ATTACH './db/sqlite_writer_duckdb_reader_with_wal.db' AS sqlite_db (TYPE SQLITE, READONLY TRUE);
+            ATTACH './db/sqlite_writer_duckdb_reader_with_wal.db' AS sqlite_db (TYPE SQLITE, READ_ONLY);
             ").unwrap();
 
             // Count the rows
@@ -304,7 +304,7 @@ mod tests {
             // Attach to the SQLite DB
             conn.execute_batch("
             INSTALL sqlite;
-            ATTACH './db/duckdb_writer_duckdb_reader_no_wal.db' AS sqlite_db (TYPE SQLITE, READONLY TRUE);
+            ATTACH './db/duckdb_writer_duckdb_reader_no_wal.db' AS sqlite_db (TYPE SQLITE, READ_ONLY);
             ").unwrap();
 
             // Count the rows
@@ -386,7 +386,7 @@ mod tests {
             // Attach to the SQLite DB
             conn.execute_batch("
             INSTALL sqlite;
-            ATTACH './db/duckdb_writer_duckdb_reader_with_wal.db' AS sqlite_db (TYPE SQLITE, READONLY TRUE);
+            ATTACH './db/duckdb_writer_duckdb_reader_with_wal.db' AS sqlite_db (TYPE SQLITE, READ_ONLY);
             ").unwrap();
 
             // Count the rows
