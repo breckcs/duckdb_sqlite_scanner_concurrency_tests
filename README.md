@@ -9,7 +9,7 @@ You can control how long each test runs by editing the row count function:
     }
 ```
 
-You can control amount of concurrency by editing how long each thread sleeps between iterations:
+You can control the amount of concurrency by editing how long each thread sleeps between iterations:
 ```rust
     fn get_sleep_duration() -> Duration {
         Duration::from_millis(1)
