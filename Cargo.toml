@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-rusqlite = { version = "0.31.0", features = ["bundled", "limits"] }
+rusqlite = { version = "0.31.0", features = ["limits"] }
 duckdb = { version = "0.10.1", features = ["bundled"]}
